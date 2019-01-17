@@ -1,43 +1,34 @@
-<!DOCTYPE html>
-<html lang="en" dir="ltr">
-  <head>
-    <meta charset="utf-8">
+<?php include_once 'head.php'; ?>
     <title>Hugo's Mexican Kitchen | Main Page</title>
-    <link rel="icon" href="img/churroslogo.png">
-    <link rel="stylesheet" href="css/style.css">
+    <script type="text/javascript" src="js/instafeed.min.js"></script>
+    <script type="text/javascript">
+      var feed = new Instafeed ({
+        get: "popular"
+        , clientId: "b3c8beb4a4c24e85957e32b107a7ba3b"
+      });
+      feed.run();
+    </script>
   </head>
   <body>
-    <div class="header">
-      <img src="img/hugoslogo2.png" alt="Hugos MC Logo" id="logo">
-      <div class="navigation">
-        <div class="navbar">
-          <div class="dropdown">
-          <button class="dropbtn">Locations</button>
-            <div class="dropdown-content">
-              <a href="#">Surrey</a>
-              <a href="#">Chilliwack</a>
-              <a href="#">Richmond</a>
-            </div>
+    <div class="nav">
+      <img src="img/hugoslogo2.png" alt="logo" id="logo">
+      <label for="toggle" id="menuicon">&#9776;</label>
+      <input type="checkbox" id="toggle"/>
+      <div class="menu">
+        <div class="dropdown">
+          <button class="dropbtn">Locations <i class="fa fa-caret-down"></i> </button>
+          <div class="dropdown-content">
+            <a href="#">Richmond</a>
+            <a href="#">Surrey</a>
+            <a href="#">Chilliwack</a>
           </div>
-          <a href="#">Gift Cards</a>
-          <a href="">Customer Feedback</a>
-          <a href="#">Reservations</a>
         </div>
-        <div class="login">
-          <form class="loginform" action="index.html" method="post">
-            <input type="text" name="Username" placeholder="Username/Email">
-            <input type="password" name="Password" placeholder="Password">
-            <button type="submit" name="login">Sign In</button>
-          </form>
-          <a href="#">Sign Up</a>
-        </div>
+        <a href="#">Gift Cards</a>
+        <a href="#">Customer Feedback</a>
+        <a href="#"><span>Reservations</span></a>
       </div>
     </div>
-    <section>
 
-    </section>
-    <div class="footer">
-
+    <div id="instafeed">
     </div>
-  </body>
-</html>
+<?php include_once 'footer.php'; ?>

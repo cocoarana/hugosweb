@@ -1,215 +1,173 @@
-/*
-html5doctor.com Reset Stylesheet
-v1.6.1
-Last Updated: 2010-09-17
-Author: Richard Clark - http://richclarkdesign.com
-Twitter: @rich_clark
-*/
-
-html, body, div, span, object, iframe,
-h1, h2, h3, h4, h5, h6, p, blockquote, pre,
-abbr, address, cite, code,
-del, dfn, em, img, ins, kbd, q, samp,
-small, strong, sub, sup, var,
-b, i,
-dl, dt, dd, ol, ul, li,
-fieldset, form, label, legend,
-table, caption, tbody, tfoot, thead, tr, th, td,
-article, aside, canvas, details, figcaption, figure,
-footer, header, hgroup, menu, nav, section, summary,
-time, mark, audio, video {
-    margin:0;
-    padding:0;
-    border:0;
-    outline:0;
-    font-size:100%;
-    vertical-align:baseline;
-    background:transparent;
+html, body{
+  width: 100%;
+  height: 100%;
+  margin: 0;
 }
 
-body {
-    line-height:1;
-}
-
-article,aside,details,figcaption,figure,
-footer,header,hgroup,menu,nav,section {
-    display:block;
-}
-
-nav ul {
-    list-style:none;
-}
-
-blockquote, q {
-    quotes:none;
-}
-
-blockquote:before, blockquote:after,
-q:before, q:after {
-    content:'';
-    content:none;
-}
-
-a {
-    margin:0;
-    padding:0;
-    font-size:100%;
-    vertical-align:baseline;
-    background:transparent;
-}
-
-/* change colours to suit your needs */
-ins {
-    background-color:#ff9;
-    color:#000;
-    text-decoration:none;
-}
-
-/* change colours to suit your needs */
-mark {
-    background-color:#ff9;
-    color:#000;
-    font-style:italic;
-    font-weight:bold;
-}
-
-del {
-    text-decoration: line-through;
-}
-
-abbr[title], dfn[title] {
-    border-bottom:1px dotted;
-    cursor:help;
-}
-
-table {
-    border-collapse:collapse;
-    border-spacing:0;
-}
-
-/* change border colour to suit your needs */
-hr {
-    display:block;
-    height:1px;
-    border:0;
-    border-top:1px solid #cccccc;
-    margin:1em 0;
-    padding:0;
-}
-
-input, select {
-    vertical-align:middle;
-}
-
-/*MY CODE*/
-
-/*General Rules*/
-
-a{
-  text-decoration: none;
+html{
+  font-family: "helvetica neue", sans-serif;
 }
 
 body{
-  background-color: #ffe;
+  background-color: #eeffff;
 }
 
-/*Navigation Bar*/
+.nav{
+  border-bottom: 1px solid #eaeaeb;
+  text-align: right;
+  height: 70px;
+  line-height: 70px;
+}
+
+.menu{
+  margin: 0 30px 0 0;
+  max-width: 800px;
+  float: right;
+}
+
+.menu a{
+  clear: right;
+  text-decoration: none;
+  color: gray;
+  margin: 0 10px;
+  line-height: 70px;
+  font-size: 14px;
+}
+
+span{
+  color: #54d17a;
+}
+
+#menuicon{
+  margin: 0 40px 0 0;
+  font-size: 26px;
+  line-height: 70px;
+  display: none;
+  width: 26px;
+  float: right;
+}
+
+#toggle{
+  display: none;
+}
 
 #logo{
+  padding: 5px 16px;
   float: left;
-  padding-top: 15px;
+  width: 160px;
 }
 
-.navigation{
-  float: right;
-  width: 75%;
-  margin-top: 35px;
-}
-
-.navbar{
-  float: left;
-}
-
-.login{
-  float: right;
-  padding-right: 10px;
-}
-
-@media screen and (max-width:600px){
-  .navigation{
-      background-color: #abc;
-    }
-  .navigation a:not(:first-child) {
-    display: none;
-  }
-}
-
-/* Navbar container */
-.navbar {
-  overflow: hidden;
-  background-color: #333;
-  font-family: Arial;
-}
-
-/* Links inside the navbar */
-.navbar a {
-  float: left;
-  font-size: 16px;
-  color: white;
-  text-align: center;
-  padding: 14px 16px;
-  text-decoration: none;
-}
-
-/* The dropdown container */
-.dropdown {
+.dropdown{
   float: left;
   overflow: hidden;
 }
 
-/* Dropdown button */
-.dropdown .dropbtn {
-  font-size: 16px;
+.dropdown .dropbtn{
+  font-size: 14px;
   border: none;
   outline: none;
-  color: white;
-  padding: 14px 16px;
+  color: gray;
   background-color: inherit;
-  font-family: inherit; /* Important for vertical align on mobile phones */
-  margin: 0; /* Important for vertical align on mobile phones */
+  padding-right:12px;
+  font-family:  inherit;
+  margin: 0;
 }
 
-/* Add a red background color to navbar links on hover */
-.navbar a:hover, .dropdown:hover .dropbtn {
-  background-color: red;
-}
-
-/* Dropdown content (hidden by default) */
-.dropdown-content {
+.dropdown-content{
   display: none;
   position: absolute;
-  background-color: #f9f9f9;
-  min-width: 160px;
+  background-color: #fafaf9;
+  min-width: 120px;
+  margin-left: -25px;
   box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
   z-index: 1;
 }
 
-/* Links inside the dropdown */
-.dropdown-content a {
+.dropdown-content a{
   float: none;
-  color: black;
-  padding: 12px 16px;
+  color: gray;
+  padding: 0 10px;
+  display: block;
+  text-align: center;
+  border-bottom: 1px solid #eaeaeb;
+}
+
+.menu a:hover, .dropdown:hover .dropbtn{
+  color:orange;
+  font-size: 14.5px;}
+
+.dropdown:hover .dropdown-content{
+  display: block;
+}
+
+.footer{
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  background-color:#efe;
+  text-align: center;
+  font-size: 15px;
+  color: gray;
+  border-top: 1px solid #eaeaeb;
+  padding-top: 10px;
+}
+
+.footer a{
   text-decoration: none;
-  display: block;
-  text-align: left;
+  color: gray;
 }
 
-/* Add a grey background color to dropdown links on hover */
-.dropdown-content a:hover {
-  background-color: #ddd;
+.footer a:hover{
+  color: pink;
 }
 
-/* Show the dropdown menu on hover */
-.dropdown:hover .dropdown-content {
-  display: block;
+.footermenu a{
+  padding: 0 10px;
+}
+
+.footermenu a:hover{
+  font-size: 16px;
+}
+
+.smed{
+  padding: 15px 10px;
+  font-size: 18px;
+}
+
+/*Responsive Design*/
+
+@media only screen and (max-width: 650px){
+  #menuicon{
+    display: block;
+    cursor: pointer;
+  }
+  .menu{
+    text-align:center;
+    width: 100%;
+    display: none;
+  }
+
+  .menu a{
+    display: block;
+    border-bottom: 1px solid #eaeaeb;
+    margin: 0;
+  }
+
+  .dropdown{
+    float: none;
+    border-bottom: 1px solid #eaeaeb;
+  }
+
+  .dropdown-content{
+    position: relative;
+    border-bottom: none;
+    border-top: 1px solid #eaeaeb;
+    box-shadow: 0 0 0 0;
+    margin-left: 0px;
+  }
+
+  #toggle:checked + .menu{
+    display: block;
+  }
 }
