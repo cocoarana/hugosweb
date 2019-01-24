@@ -7,7 +7,7 @@
   <br><br>
   <div class="footermenu">
     <a href="#">Our Story</a>
-    <a href="#">Our Menus</a>
+    <a href="#">Our Menu</a>
     <a href="#">Contact Us</a>
   </div>
   <p><b>&#169; Hugo's Mexican Kitchen. All rigths Reserved.</b></p>
