@@ -1,3 +1,5 @@
+/*GENERAL*/
+
 html, body{
   width: 100%;
   height: 100%;
@@ -5,12 +7,14 @@ html, body{
 }
 
 html{
-  font-family: "helvetica neue", sans-serif;
+font-family: 'Poiret One', cursive;
 }
 
 body{
-  background-color: #eeffff;
+  background-color: #eff4fc;
 }
+
+/*MENU*/
 
 .nav{
   border-bottom: 1px solid #eaeaeb;
@@ -34,7 +38,7 @@ body{
   color: gray;
   margin: 0 10px;
   line-height: 70px;
-  font-size: 14px;
+  font-size: 18px;
 }
 
 span{
@@ -43,7 +47,7 @@ span{
 
 #menuicon{
   margin: 0 40px 0 0;
-  font-size: 26px;
+  font-size: 28px;
   line-height: 70px;
   display: none;
   width: 26px;
@@ -66,7 +70,7 @@ span{
 }
 
 .dropdown .dropbtn{
-  font-size: 14px;
+  font-size: 16px;
   border: none;
   outline: none;
   color: gray;
@@ -97,11 +101,13 @@ span{
 
 .menu a:hover, .dropdown:hover .dropbtn{
   color:orange;
-  font-size: 14.5px;}
+  font-size: 16.5px;}
 
 .dropdown:hover .dropdown-content{
   display: block;
 }
+
+/*FOOTER*/
 
 .footer{
   position: relative;
@@ -110,10 +116,11 @@ span{
   width: 100%;
   background-color:#efe;
   text-align: center;
-  font-size: 15px;
+  font-size: 17px;
   color: gray;
   border-top: 1px solid #eaeaeb;
   padding-top: 10px;
+  margin-top: 20px;
 }
 
 .footer a{
@@ -130,164 +137,159 @@ span{
 }
 
 .footermenu a:hover{
-  font-size: 16px;
+  font-size: 18px;
 }
 
 .smed{
   padding: 15px 10px;
-  font-size: 18px;
+  font-size: 20px;
 }
 
-.wrapper{
-  min-height: 100%;
+/*SECTION*/
+
+#section{
+}
+
+/*IND SECTIONS*/
+
+#section-instagram{
+  height: 55%;
+  margin-top: 5px;
+  display: flex;
+  width: 100%;
+}
+
+#section-instagram-fullpic{
+  width:55%;
+  float: right;
   overflow: hidden;
 }
 
-.img_container{
-  margin: 15px 8%;
-  position: relative;
-}
-
-.igpic{
+#section-instagram-grid{
+  width: 45%;
   float: left;
-  padding: 5px;
+  overflow: hidden;
 }
 
-.igpic img{
-  opacity: 0.8;
-  filter: alpha(opacity=80);
-  border-radius: 5%;
+#section-quote{
+  height: 4%;
+  margin-top: 5px;
+  font-family: 'Cookie', cursive;
+  font-size: 24px;
+  text-align: center;
+  padding-top: 7px;
+  -webkit-animation-name: sizedown;
+  -webkit-animation-duration: 2s;
+  animation-name: sizedown;
+  animation-duration: 2s;
 }
 
-.igpic img:hover{
-  opacity: 1;
-  filter: alpha(opacity=100);
+#section-dinamic{
+  height: 30%;
+  background-color: green;
+  width: 100%;
+  display: flex;
+  margin-top: 5px;
 }
 
-.igpic img:hover{
-  transform: scale(1.05,1.05);
+#section-dinamic-locations{
+  width: 50%;
+  background-color: green;
+  float: left;
 }
 
-
-/*Responsive Design*/
-
-@media only screen and (max-width: 760px){
-  #menuicon{
-    display: block;
-    cursor: pointer;
-  }
-
-  .img_container{
-    margin:15px 7%;
-  }
-
-  .menu{
-    text-align:center;
-    width: 100%;
-    display: none;
-  }
-
-  .menu a{
-    display: block;
-    border-bottom: 1px solid #eaeaeb;
-    margin: 0;
-    background-color: #fafaf9;
-  }
-
-  .dropdown{
-    float: none;
-    border-bottom: 1px solid #eaeaeb;
-    background-color: #fafaf9;
-  }
-
-  .dropdown-content{
-    position: relative;
-    border-bottom: none;
-    border-top: 1px solid #eaeaeb;
-    box-shadow: 0 0 0 0;
-    margin-left: 0px;
-  }
-
-  .dropdown-content a{
-  background-color: #fafaff;
-  }
-
-  #toggle:checked + .menu{
-    display: block;
-  }
+#section-dinamic-menu{
+  width: 50%;
+  background-color: lightgreen;
+  float: right;
 }
 
-/*alternate*/
-
-.container{
-  position: relative;
-  margin: 0 25%;
+#section-reservations{
+  height: 10%;
+  background-color: black;
+  margin-top: 5px;
+  text-align: center;
+  padding-top: 15px;
 }
+
+#section-reservations a{
+font-size: 37px;
+  color: white;
+  text-decoration: none;
+}
+
+#section-reservations a:hover{
+font-size: 40px;
+}
+
+/*SLIDESHOW*/
 
 .mySlides{
   display: none;
-  background-color: black;
+  height: inherit;
 }
 
 .mySlides img{
-  margin: 0 25%;
+  height: 350px;
 }
 
-.cursor{
-  cursor: pointer;
+.fade {
+  -webkit-animation-name: fade;
+  -webkit-animation-duration: 1s;
+  animation-name: fade;
+  animation-duration: 1s;
 }
 
-.prev, .next{
-  cursor: pointer;
-  position: absolute;
-  top:40%;
-  width: auto;
-  length:100%;
-  padding: 16px;
-  margin-top: -50px;
-  color: white;
-  font-weight: bold;
-  font-size: 20px;
-  border-radius: 0 3px 3px 0;
-  user-select: none;
-  -webkit-user-select: none;
+@-webkit-keyframes fade {
+  from {opacity: .4}
+  to {opacity: 1}
 }
 
-.next{
-  right: 0;
-  border-radius: 3px 0 0 3px;
+@keyframes fade {
+  from {opacity: .4}
+  to {opacity: 1}
 }
 
-.prev:hover, .next:hover{
-  background-color: #111;
+/*INSTAGRAM GRID*/
+
+.row{
+  display: flex;
+  flex-wrap: wrap;
 }
 
-.numbertext{
-  color: #f2f2f2;
-  font-size: 12px;
-  padding: 8px 12px;
-  position: absolute;
-  top: 0;
+.thumbnailimg{
+  opacity: .6;
+  border-radius: 7%;
 }
 
-.caption-container{
-  text-align: center;
-  background-color: #222;
-  padding: 2px 16px;
-  color: white;
-}
-
-.row:after{
-  content: "";
-  display: table;
-  clear: both;
-}
-
-
-.demo{
-  opacity: 0.6;
-}
-
-.active, .demo:hover{
+.active, .thumbnailimg:hover{
+  transform: scale(1.02);
   opacity: 1;
+}
+
+#section-quote:hover{
+  -webkit-animation-name: sizeup;
+  -webkit-animation-duration: 2s;
+  animation-name: sizeup;
+  animation-duration: 2s;
+}
+
+@-webkit-keyframes sizeup {
+  from {font-size: 24px}
+  to {font-size: 27px}
+}
+
+@keyframes sizeup {
+  from {font-size: 24px}
+  to {font-size: 27px}
+}
+
+@-webkit-keyframes sizedown {
+  from {font-size: 27px}
+  to {font-size: 24px}
+}
+
+@keyframes sizedown {
+  from {font-size: 27px}
+  to {font-size: 24px}
 }
