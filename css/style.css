@@ -186,7 +186,6 @@ span{
 
 #section-dinamic{
   height: 30%;
-  background-color: green;
   width: 100%;
   display: flex;
   margin-top: 5px;
@@ -194,13 +193,11 @@ span{
 
 #section-dinamic-locations{
   width: 50%;
-  background-color: green;
   float: left;
 }
 
 #section-dinamic-menu{
   width: 50%;
-  background-color: lightgreen;
   float: right;
 }
 
@@ -292,4 +289,85 @@ font-size: 40px;
 @keyframes sizedown {
   from {font-size: 27px}
   to {font-size: 24px}
+}
+
+/*Flip Cards*/
+
+.flip-card{
+  background-color: transparent;
+  perspective: 1000px;
+}
+
+.flip-card-inner{
+  position: relative;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  transition: transform 0.8s;
+  transform-style: preserve-3d;
+}
+
+.flip-card:hover .flip-card-inner{
+  transform: rotateX(180deg);
+}
+
+.flip-card-front, .flip-card-back{
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  backface-visibility: hidden;
+}
+
+.flip-card-front{
+  text-align: center;
+  font-size: 30px;
+  font-weight: bold;
+}
+
+.flip-card-back{
+  font-weight: bold;
+  transform: rotateX(180deg);
+  text-align: center;
+  font-size: 35px;
+}
+
+.flip-card-back select,.flip-card-back input{
+  font-weight: bold;
+  font-family: 'Poiret One', cursive;
+  font-size: 18px;
+}
+
+.flip-card-back input{
+  border: none;
+  background-color: transparent;
+  border-radius: 8%;
+}
+
+.flip-card-back input:hover{
+  font-size: 25px;
+  cursor: pointer;
+}
+
+#front-location{
+  background-color: white;
+  color: black;
+}
+
+#back-location{
+  background-color: black;
+  color: white;
+}
+
+#back-location input{
+  color: white;
+}
+
+#front-menu{
+  background-color: black;
+  color: white;
+}
+
+#back-menu{
+  background-color: white;
+  color: black;
 }

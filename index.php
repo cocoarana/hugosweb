@@ -1,7 +1,9 @@
 <?php include_once 'head.php'; ?>
     <title>Hugo's Mexican Kitchen | Main Page</title>
     <?php
-      $access_token_ig = '561892672.153bf43.e614ceabd0a14ceb828760d716658a41';
+      // Richmond '1700504310.5a2c80c.9d9f92f49a234aaaa1a23dd6053474e7'
+      // Clayton
+      $access_token_ig = '1700504310.5a2c80c.9d9f92f49a234aaaa1a23dd6053474e7';
       $totalpics = 12;
      ?>
     <script src="js/events.js" charset="utf-8"></script>
@@ -66,10 +68,56 @@
       ?>
     </div>
     <div id="section-dinamic">
-      <div id="section-dinamic-locations">
-
+      <div id="section-dinamic-locations" class="flip-card">
+        <div class="flip-card-inner">
+          <div class="flip-card-front" id="front-location">
+          <br>
+            Our locations
+            <br><br>
+            ▼
+          </div>
+          <div class="flip-card-back" id="back-location">
+            <form action="index.php" method="post">
+            <br>
+              Select a location
+              <br>
+              <select>
+                <option value="0">Richmond</option>
+                <option value="1">Clayton</option>
+                <option value="2">Chilliwack</option>
+              </select>
+              <br>
+              <input type="submit" name="submit" value="Let's go">
+            </form>
+          </div>
+        </div>
       </div>
-      <div id="section-dinamic-menu">
+      <div id="section-dinamic-menu" class="flip-card">
+        <div class="flip-card-inner">
+          <div class="flip-card-front" id="front-menu">
+          <br>
+            Our Menu
+            <br><br>
+            ▼
+          </div>
+          <div class="flip-card-back" id="back-menu">
+            <form action="index.php" method="post">
+            <br>
+              Select a menu option
+              <br>
+              <select>
+                <option value="0">All Food</option>
+                <option value="1">Gluten Free</option>
+                <option value="2">Vegan</option>
+                <option value="3">Vegetarian</option>
+                <option value="4">Drinks</option>
+                <option value="5">Dessert</option>
+              </select>
+              <br>
+              <input type="submit" name="submit" value="Let's go">
+            </form>
+          </div>
+        </div>
 
       </div>
     </div>
