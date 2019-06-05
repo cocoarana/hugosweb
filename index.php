@@ -1,18 +1,19 @@
-<?php include_once 'head.php'; ?>
-    <title>Hugo's Mexican Kitchen | Main Page</title>
+<?php include_once 'support_files/head.php'; ?>
+<title>Hugo's Mexican Kitchen | Main Page</title>
     <?php
       // Richmond '1700504310.5a2c80c.9d9f92f49a234aaaa1a23dd6053474e7'
       // Clayton
-      $access_token_ig = '1700504310.5a2c80c.9d9f92f49a234aaaa1a23dd6053474e7';
+      $access_token_ig = '1700504310.5a2c80c.dd53133fabba4d9caea402a20b5cedef';
       $totalpics = 12;
      ?>
-    <script src="js/events.js" charset="utf-8"></script>
+    <script src="/hugosweb/js/events.js" charset="utf-8"></script>
   </head>
   <body>
-  <?php include_once 'menu.php'; ?>
+  <?php include_once 'support_files/menu.php'; ?>
   <div id="section">
     <div id="section-instagram">
       <div id="section-instagram-fullpic">
+        <!--This section is the full picture of instagram-->
           <?php
             $url = "https://api.instagram.com/v1/users/self/media/recent/?access_token=".$access_token_ig;
             $json_data = file_get_contents($url);
@@ -24,7 +25,7 @@
               echo '</div>';
             }
           ?>
-        <script type="text/javascript">wah();</script>
+        <script type="text/javascript"> wah();</script>
       </div>
       <div id="section-instagram-grid">
         <div class="row">
@@ -61,68 +62,26 @@
     </div>
     <div id="section-quote">
       <?php
-        $json_data = file_get_contents("quotes.json");
+        $json_data = file_get_contents("json/quotes.json");
         $json = json_decode($json_data, true);
         $totquotes = count($json['quotes']);
         echo $json['quotes'][(mt_rand(1,$totquotes))-1]['Content'];
       ?>
     </div>
-    <div id="section-dinamic">
-      <div id="section-dinamic-locations" class="flip-card">
-        <div class="flip-card-inner">
-          <div class="flip-card-front" id="front-location">
-          <br>
-            Our locations
-            <br><br>
-            ▼
-          </div>
-          <div class="flip-card-back" id="back-location">
-            <form action="index.php" method="post">
-            <br>
-              Select a location
-              <br>
-              <select>
-                <option value="0">Richmond</option>
-                <option value="1">Clayton</option>
-                <option value="2">Chilliwack</option>
-              </select>
-              <br>
-              <input type="submit" name="submit" value="Let's go">
-            </form>
-          </div>
-        </div>
-      </div>
-      <div id="section-dinamic-menu" class="flip-card">
-        <div class="flip-card-inner">
-          <div class="flip-card-front" id="front-menu">
-          <br>
-            Our Menu
-            <br><br>
-            ▼
-          </div>
-          <div class="flip-card-back" id="back-menu">
-            <form action="index.php" method="post">
-            <br>
-              Select a menu option
-              <br>
-              <select>
-                <option value="0">All Food</option>
-                <option value="1">Gluten Free</option>
-                <option value="2">Vegan</option>
-                <option value="3">Vegetarian</option>
-                <option value="4">Drinks</option>
-                <option value="5">Dessert</option>
-              </select>
-              <br>
-              <input type="submit" name="submit" value="Let's go">
-            </form>
-          </div>
-        </div>
-
-      </div>
-    </div>
     <div id="section-reservations">
       <a href="#">Get a reservation</a>
     </div>
+    <div class="menu-div">
+      <br>
+      Select a section from our menu
+      <br><br>
+      <div class="menu-options">
+        <a href="ourmenu/index.php?cat=1">To Start and share</a>
+        <a href="ourmenu/index.php?cat=2">Los tacos</a>
+        <a href="ourmenu/index.php?cat=3">The main event</a>
+        <a href="ourmenu/index.php?cat=4">Dessert</a>
+      </div>
+      <br>
+    </div>
   </div>
-<?php include_once 'footer.php'; ?>
+<?php include_once 'support_files/footer.php'; ?>

@@ -15,6 +15,7 @@ function wah(){
   document.getElementById("section").style.width = widhtwin;
   document.getElementById("section").style.paddingLeft = (w-(w*modwidht))/2+"px";
   document.getElementById("section").style.paddingRight = (w-(w*modwidht))/2+"px";
+  setTimeout(wah,1000);
 }
 
 var slideIndex = 0;
