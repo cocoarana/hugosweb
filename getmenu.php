@@ -44,7 +44,7 @@
   echo '</tr>';
   while ($row = mysqli_fetch_array($results)) {
     echo '<tr>';
-    echo '<td>'.$row["menu_item"].'</td>';
+    echo '<td class="prices">'.$row["menu_item"].'</td>';
     echo '<td>'.$row["descr"].'</td>';
     echo '<td class="prices">$'.round($row["price"]+.001,2).'</td>';
     echo '<td class="prices">'.$row["addon"].'</td>';

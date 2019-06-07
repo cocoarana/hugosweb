@@ -254,3 +254,42 @@ font-size: 40px;
   background-color: #234;
   border-radius: 40%;
 }
+
+/*//Our menu//*/
+
+.container{
+  margin-top: 10px;
+}
+
+.formholders{
+  text-align: center;
+  margin-top: 5px;
+}
+
+.formholders select{
+  font-size: 18px;
+}
+
+#results{
+  width: 80%;
+  margin: 15px 10%;
+  text-align: center;
+}
+
+#results th{
+  border: 1px dotted #444
+  ;
+  font-weight: bolder;
+  font-size: 20px;
+}
+
+#results tr td{
+  border: 1px dashed #666;
+  font-size: 14px;
+}
+
+.prices{
+  font-weight: bold;
+  font-style: italic;
+  font-size: 18px;
+}

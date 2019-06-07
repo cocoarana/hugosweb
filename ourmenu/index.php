@@ -11,7 +11,7 @@
 
       }
     }
-  </script
+  </script>
   <div class="container">
     <div class="formholders">
       <select class="selectors" name="catselect" onchange="showmenu(this.value, 'a')" id="cat">
@@ -54,7 +54,7 @@
           xhttp = new XMLHttpRequest();
           xhttp.onreadystatechange = function() {
             if (this.readyState == 4 && this.status == 200) {
-            document.getElementById("results").innerHTML = this.responseText;
+              document.getElementById("results").innerHTML = this.responseText;
             }
           };
           xhttp.open("GET", "../getmenu.php?cat="+str1+"&que="+str2, true);
@@ -65,8 +65,8 @@
         showmenu('a', 'a');
       </script>
     </div>
-  </div>
   <div id="results">
     <b>Select one or more options from above</b>
   </div>
+</div>
   <?php include_once '../support_files/footer.php'; ?>
