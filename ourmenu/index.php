@@ -1,5 +1,5 @@
 <?php include_once '../support_files/head.php'; ?>
-  <title>Hugo's Mexican Kitchen | Main Page</title>
+  <title>Hugo's Mexican Kitchen | Our menu</title>
 </head>
 <body>
   <?php include_once '../support_files/menu.php'; ?>

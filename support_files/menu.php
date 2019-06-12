@@ -4,8 +4,8 @@
   <input type="checkbox" id="toggle"/>
   <div class="menu">
   <a href="/hugosweb/ourmenu/index.php">Our Menu</a>
-    <a href="#">Gift Cards</a>
-    <a href="#">Customer Feedback</a>
-    <a href="#"><span>Reservations</span></a>
+    <!-- <a href="#">Gift Cards</a> -->
+    <a href="/hugosweb/custFeedback/index.php">Customer Feedback</a>
+    <a href="/hugosweb/reservations/index.php"><span>Reservations</span></a>
   </div>
 </div>

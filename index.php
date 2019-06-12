@@ -69,7 +69,7 @@
       ?>
     </div>
     <div id="section-reservations">
-      <a href="#">Get a reservation</a>
+      <a href="reservations/index.php">Get a reservation</a>
     </div>
     <div class="menu-div">
       <br>

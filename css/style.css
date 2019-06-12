@@ -236,7 +236,7 @@ font-size: 40px;
 .menu-div{
   text-align: center;
   font-size: 32px;
-  background-color: #192837;
+  background-color: #a0e3ef;
   font-weight: bold;
 }
 
@@ -293,3 +293,44 @@ font-size: 40px;
   font-style: italic;
   font-size: 18px;
 }
+
+.selectors select{
+  font-size: 15px;
+}
+
+.res-form{
+  margin: 20px 0;
+  text-align: center;
+}
+
+.res-form input, textarea{
+  width: 200px;
+}
+
+.contact{
+  text-align: center;
+}
+
+/* .res-main{
+  text-align: center;
+}
+
+.res-guest{
+  margin: 80px 0;
+}
+
+.res-guest-num{
+  padding: 50px;
+  margin: 0 10px;
+  border: 1px solid black;
+  text-decoration: none;
+  font-size: 36px;
+  font-weight: bold;
+  color: #333;
+}
+
+.res-guest-num:hover{
+  color: #eee;
+  background-color: #373;
+  cursor: pointer;
+} */
