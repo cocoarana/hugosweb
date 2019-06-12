@@ -6,10 +6,10 @@
   <?php include_once '../support_files/menu.php'; ?>
   <div class="reservations">
     <form class="res-form" action="../support_files/sendinfo.php" method="post">
-      <input type="text" name="resName" value="" placeholder="Guest Name" required>
-      <br><input type="date" name="resDate" value="" required>
-      <br><input type="email" name="resMail" value="" placeholder="Email Address" required>
-      <br><input type="number" name="resPhone" value="" placeholder="Contact Number" required>
+        <input type="text" name="resName" value="" placeholder="Guest Name" required autocomplete="off">
+      <br><input type="date" name="resDate" value="" required autocomplete="off">
+      <br><input type="email" name="resMail" value="" placeholder="Email Address" required autocomplete="off">
+      <br><input type="number" name="resPhone" value="" placeholder="Contact Number" required autocomplete="off">
       <br><textarea name="resDetails" rows="8" cols="22" placeholder="Details" required></textarea>
       <br><input type="hidden" name="page" value="feedback">
       <br><input type="submit" name="submit" value="Submit">
